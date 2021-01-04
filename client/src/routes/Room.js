@@ -10,7 +10,7 @@ const Room = (props) => {
     const userStream = useRef();
 
     useEffect(() => {
-        navigator.mediaDevices.getUserMedia({audio: true, video:true}).then(stream => {
+        navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(stream => {
             userVideo.current.srcObject = stream;
             userStream.current = stream;
 
@@ -60,7 +60,7 @@ const Room = (props) => {
 
         return peer;
     }
-    
+
     function handleNegotiationNeededEvent(userID) {
         peerRef.current.createOffer().then(offer => {
             return peerRef.current.setLocalDescription(offer);
@@ -70,11 +70,11 @@ const Room = (props) => {
                 caller: socketRef.current.id,
                 sdp: peerRef.current.localDescription
             };
-            socketRef.current.emit("offer",payload);
+            socketRef.current.emit("offer", payload);
         }).catch(e => console.log(e));
     }
-    
-    function handleRecieveCall(incoming){
+
+    function handleRecieveCall(incoming) {
         peerRef.current = createPeer();
         const desc = new RTCSessionDescription(incoming.sdp);
         peerRef.current.setRemoteDescription(desc).then(() => {
@@ -89,15 +89,15 @@ const Room = (props) => {
                 caller: socketRef.current.id,
                 sdp: peerRef.current.localDescription
             }
-            socketRef.current.emit("answer",payload);
+            socketRef.current.emit("answer", payload);
         })
     }
-    
+
     function handleAnswer(message) {
         const desc = new RTCSessionDescription(message.sdp);
         peerRef.current.setRemoteDescription(desc).catch(e => console.log(e));
     }
-    
+
     function handleICECandidateEvent(e) {
         if (e.candidate) {
             const payload = {
@@ -122,7 +122,7 @@ const Room = (props) => {
     return (
         <div>
             <video autoPlay ref={userVideo} />
-            <video autoplay ref={partnerVideo} />
+            <video autoPlay ref={partnerVideo} />
         </div>
     );
 };

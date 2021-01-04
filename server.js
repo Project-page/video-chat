@@ -1,10 +1,11 @@
+require("dotenv").config();
+const { SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS } = require("constants");
 const express = require("express");     // Importing express module
 const http = require("http");           //Importing http
 const app = express();                  // creating an express app object
 const server = http.createServer(app);
 const socket = require("socket.io");    //Importing socket.io
 const io = socket(server);              //Creating instance of io by calling socket passing the newly created server
-
 
 const rooms = {};
 
@@ -35,6 +36,13 @@ io.on("connection", socket => {
     });
 });
 
+if (process.env.PROD) {
+    app.use(express.static(path.join(__dirname, './client/build')));
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, './client/build/index.html'));
+    });
+}
 
 
-server.listen(8000, () => console.log('server is running on port 8000'));
+const port = process.env.PORT || 8000;
+server.listen(port, () => console.log(`server is running on port ${port}`));
