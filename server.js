@@ -6,6 +6,7 @@ const app = express();                  // creating an express app object
 const server = http.createServer(app);
 const socket = require("socket.io");    //Importing socket.io
 const io = socket(server);              //Creating instance of io by calling socket passing the newly created server
+const path = require("path");
 
 const rooms = {};
 
