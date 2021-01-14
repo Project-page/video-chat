@@ -14,7 +14,7 @@ const Room = (props) => {
     const [image, setImage] = useState(false);
 
     useEffect(() => {
-        navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(stream => {
+        navigator.mediaDevices.getUserMedia({ audio: false, video: true }).then(stream => {
             userVideo.current.srcObject = stream;
             userStream.current = stream;
 

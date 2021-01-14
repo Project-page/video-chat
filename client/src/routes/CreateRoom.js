@@ -4,11 +4,11 @@ import { v1 as uuid } from "uuid";
 const CreateRoom = (props) => {
     function create() {
         const id = uuid();
-        props.history.push(`/room/${id}`);
+        props.history.push(`/admin/${id}`);
     }
 
     return (
-        <button onClick={create}>Create Room</button>
+        <button class="button" onClick={create}>Start Study</button>
     );
 }
 
