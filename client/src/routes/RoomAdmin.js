@@ -1,17 +1,13 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import io from "socket.io-client";
 
-const Room = (props) => {
+const RoomAdmin = (props) => {
     const userVideo = useRef();
     const partnerVideo = useRef();
     const peerRef = useRef();
     const socketRef = useRef();
     const otherUser = useRef();
     const userStream = useRef();
-
-    const [message, setMessage] = useState("");
-    const [gif, setGif] = useState(false);
-    const [image, setImage] = useState(false);
 
     useEffect(() => {
         navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(stream => {
@@ -35,20 +31,6 @@ const Room = (props) => {
             socketRef.current.on("answer", handleAnswer);
 
             socketRef.current.on("ice-candidate", handleNewICECandidateMsg);
-
-            socketRef.current.on("incomingMessage", (message)=>{
-                if(message==="From Button 2"){
-                    setGif(true)
-                }else{
-                    setGif(false)
-                }
-                if(message==="From Button 3"){
-                    setImage(true)
-                }else{
-                    setImage(false)
-                }
-                setMessage(message);
-            });
         });
 
     }, []);
@@ -137,17 +119,23 @@ const Room = (props) => {
         partnerVideo.current.srcObject = e.streams[0];
     };
 
+    function sendMessage(message){
+        socketRef.current.emit("fromBtn", message);
+        console.log("sent");
+    }
+
     return (
         <div>
-            <video autoPlay ref={userVideo} width="320" height="240" />
-            <video autoPlay ref={partnerVideo} style={{visibility:"hidden", width:0}}/>
-
-            <h1>{message}</h1>
-            {gif?<img src="https://www.amnh.org/var/ezflow_site/storage/images/media/amnh/images/explore/ology-images/brain/optical-illustions/disappearing-dot/2933633-1-eng-US/disappearing-dot.gif" 
-                        width="320" height="240" align="center" />:""}
-            {image?<img src="/logo192.png" />:""}
+            <video autoPlay ref={userVideo} style={{width:0,visibility:"hidden"}}/>
+            <video autoPlay ref={partnerVideo} />
+            <div>
+                <button class="button" onClick={()=>sendMessage("From Button 1")}>Button 1</button>
+                <button class="button" onClick={()=>sendMessage("From Button 2")}>Button 2</button>
+                <button class="button" onClick={()=>sendMessage("From Button 3")}>Button 3</button>
+                <button class="button" onClick={()=>sendMessage("From Button 4")}>Button 4</button>
+            </div>
         </div>
     );
 };
 
-export default Room;
+export default RoomAdmin;

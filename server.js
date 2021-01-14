@@ -32,6 +32,12 @@ io.on("connection", socket => {
         io.to(payload.target).emit("answer",payload);
     });
 
+    //Message From Button 
+    socket.on("fromBtn",payload => {     
+        console.log("Got it");
+        socket.broadcast.emit("incomingMessage",payload);
+    });
+
     socket.on("ice-candidate", incoming => {          
         io.to(incoming.target).emit("ice-candidate",incoming.candidate);
     });
