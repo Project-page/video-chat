@@ -62,12 +62,16 @@ const Room = (props) => {
         const peer = new RTCPeerConnection({
             iceServers: [
                 {
-                    urls: "stun:stun.stunprotocol.org"
+                    //urls: "stun:stun.stunprotocol.org"
+                    urls: "stun:relay.backups.cz"
                 },
                 {
-                    urls: 'turn:numb.viagenie.ca',
-                    credential: 'muazkh',
-                    username: 'webrtc@live.com'
+                    // urls: 'turn:numb.viagenie.ca',
+                    // credential: 'muazkh',
+                    // username: 'webrtc@live.com'
+                    url: 'turn:relay.backups.cz',
+                    credential: 'webrtc',
+                    username: 'webrtc'
                 },
             ]
         });
