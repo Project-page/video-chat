@@ -49,3 +49,25 @@
   margin: 4px 2px;
   cursor: pointer;
 }
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img.one {
+  height: auto;
+  width: auto;
+}
+
+img.two {
+  height: 25%;
+  width: 25%;
+}
