@@ -109,7 +109,7 @@ const Room = (props) => {
 
   function createPeer(userID) {
     const peer = new RTCPeerConnection({
-      iceServers: [],
+      iceServers: [{ url: "stun:stun.l.google.com:19302" }],
     });
 
     peer.onicecandidate = handleICECandidateEvent;
