@@ -47,26 +47,13 @@ const RoomAdmin = (props) => {
         const peer = new RTCPeerConnection({
             iceServers: [
                 {
-                    //urls: "stun:stun.stunprotocol.org"
                     urls: "stun:numb.viagenie.ca"
                 },
-                //{
-                    // urls: 'turn:numb.viagenie.ca',
-                    // credential: 'muazkh',
-                    // username: 'webrtc@live.com'
-                   // url: 'turn:relay.backups.cz',
-                   // credential: 'webrtc',
-                   // username: 'webrtc'
-                //},
                 {
-                    url: 'turn:relay.backups.cz',
-                    credential: 'webrtc',
-                    username: 'webrtc'
-                },
-                {
-                    url: 'turn:relay.backups.cz?transport=tcp',
-                    credential: 'webrtc',
-                    username: 'webrtc'
+                    urls: 'turn:numb.viagenie.ca',
+                    credential: 'stunserver101',
+                    username: 'tamzidhossainxarir@gmail.com',
+                    credentialType: 'password'
                 },
             ]
         });

@@ -112,7 +112,7 @@ const Room = (props) => {
                     urls: "stun:numb.viagenie.ca"
                 },
                 {
-                    url: 'turn:numb.viagenie.ca',
+                    urls: 'turn:numb.viagenie.ca',
                     credential: 'stunserver101',
                     username: 'tamzidhossainxarir@gmail.com',
                     credentialType: 'password'
