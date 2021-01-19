@@ -210,14 +210,14 @@ const Room = (props) => {
 
             </script>
             <p>{message}</p>
-            {image1?<img src="/line1.png" width="300" height="300" align="center" />:""}
-            {image2?<img src="/line1.png" width="600" height="600" align="center" />:""}
-            {image3?<img src="/L1.png"    width="300" height="300" align="center" />:""}
-            {image4?<img src="/L1.png"    width="600" height="600" align="center" />:""}
-            {image5?<img src="/U1.png"    width="300" height="300" align="center" />:""}
-            {image6?<img src="/U1.png"    width="600" height="600" align="center" />:""}
-            {image7?<img src="/rect1.png"    width="300" height="300" align="center" />:""}
-            {image8?<img src="/rect1.png"    width="600" height="600" align="center" />:""}
+            {image1?<img src="/line1.png" width="250" height="250" align="center" />:""}
+            {image2?<img src="/line1.png" width="408" height="408" align="center" />:""}
+            {image3?<img src="/L1.png"    width="250" height="250" align="center" />:""}
+            {image4?<img src="/L1.png"    width="408" height="408" align="center" />:""}
+            {image5?<img src="/U1.png"    width="250" height="250" align="center" />:""}
+            {image6?<img src="/U1.png"    width="408" height="408" align="center" />:""}
+            {image7?<img src="/rect1.png"    width="250" height="250" align="center" />:""}
+            {image8?<img src="/rect1.png"    width="408" height="408" align="center" />:""}
             
         </div>
     );
