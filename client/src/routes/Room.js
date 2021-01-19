@@ -109,42 +109,13 @@ const Room = (props) => {
         const peer = new RTCPeerConnection({
             iceServers: [
                 {
-                    //urls: "stun:stun.stunprotocol.org"
-                    urls: "stun:stun.l.google.com"
+                    urls: "stun:numb.viagenie.ca"
                 },
                 {
-                    //urls: "stun:stun.stunprotocol.org"
-                    urls: "stun:stun1.l.google.com"
-                },
-                {
-                    //urls: "stun:stun.stunprotocol.org"
-                    urls: "stun:stun2.l.google.com"
-                },
-                {
-                    //urls: "stun:stun.stunprotocol.org"
-                    urls: "stun:stun3.l.google.com"
-                },
-                {
-                    //urls: "stun:stun.stunprotocol.org"
-                    urls: "stun:stun4.l.google.com"
-                },
-                //{
-                    // urls: 'turn:numb.viagenie.ca',
-                    // credential: 'muazkh',
-                    // username: 'webrtc@live.com'
-                   // url: 'turn:relay.backups.cz',
-                   // credential: 'webrtc',
-                   // username: 'webrtc'
-                //},
-                {
-                    url: 'turn:relay.backups.cz',
-                    credential: 'webrtc',
-                    username: 'webrtc'
-                },
-                {
-                    url: 'turn:relay.backups.cz?transport=tcp',
-                    credential: 'webrtc',
-                    username: 'webrtc'
+                    url: 'turn:numb.viagenie.ca',
+                    credential: 'stunserver101',
+                    username: 'tamzidhossainxarir@gmail.com',
+                    credentialType: 'password'
                 },
             ]
         });
