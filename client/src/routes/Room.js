@@ -108,15 +108,15 @@ const Room = (props) => {
     function createPeer(userID) {
         const peer = new RTCPeerConnection({
             iceServers: [
-                {
-                    urls: "stun:numb.viagenie.ca"
-                },
-                {
-                    urls: 'turn:numb.viagenie.ca',
-                    credential: 'stunserver101',
-                    username: 'tamzidhossainxarir@gmail.com',
-                    credentialType: 'password'
-                },
+                {urls: ["turn:173.194.72.127:19305?transport=udp",
+                "turn:[2404:6800:4008:C01::7F]:19305?transport=udp",
+                "turn:173.194.72.127:443?transport=tcp",
+                "turn:[2404:6800:4008:C01::7F]:443?transport=tcp"
+                ],
+              username:"CKjCuLwFEgahxNRjuTAYzc/s6OMT",
+              credential:"u1SQDR/SQsPQIxXNWQT7czc/G4c="
+             },
+             {urls:["stun:stun.l.google.com:19302"]}
             ]
         });
 
