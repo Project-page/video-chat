@@ -46,8 +46,14 @@ const RoomAdmin = (props) => {
   }
 
   function createPeer(userID) {
+    // const peer = new RTCPeerConnection({
+    //   iceServers: [{ url: "stun:stun.l.google.com:19302" }],
+    // });
     const peer = new RTCPeerConnection({
-      iceServers: [{ url: "stun:stun.l.google.com:19302" }],
+      iceServers: [
+        { urls: "stun:stun.services.mozilla.com" },
+        { urls: "stun:stun.l.google.com:19302" },
+      ],
     });
 
     peer.onicecandidate = handleICECandidateEvent;
