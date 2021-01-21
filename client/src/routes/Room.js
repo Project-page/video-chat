@@ -240,12 +240,12 @@ const Room = (props) => {
         ""
       )}
       {image7 ? (
-        <img src="/rect1.png" style={{ width: "50%" }} align="center" />
+        <img src="/Gif1.png" style={{ width: "50%" }} align="center" />
       ) : (
         ""
       )}
       {image8 ? (
-        <img src="/rect1.png" style={{ width: "100%" }} align="center" />
+        <img src="/Gif1.png" style={{ width: "100%" }} align="center" />
       ) : (
         ""
       )}
