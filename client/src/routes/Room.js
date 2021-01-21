@@ -210,12 +210,12 @@ const Room = (props) => {
       <script></script>
       <p>{message}</p>
       {image1 ? (
-        <img src="/line1.png" width="250" height="250" align="center" />
+        <img src="/line1.png" style={{ width: "50%" }} align="center" />
       ) : (
         ""
       )}
       {image2 ? (
-        <img src="/line1.png" width="408" height="408" align="center" />
+        <img src="/line1.png" style={{ width: "100%" }} align="center" />
       ) : (
         ""
       )}
@@ -240,12 +240,12 @@ const Room = (props) => {
         ""
       )}
       {image7 ? (
-        <img src="/rect1.png" width="250" height="250" align="center" />
+        <img src="/rect1.png" style={{ width: "50%" }} align="center" />
       ) : (
         ""
       )}
       {image8 ? (
-        <img src="/rect1.png" width="408" height="408" align="center" />
+        <img src="/rect1.png" style={{ width: "100%" }} align="center" />
       ) : (
         ""
       )}
