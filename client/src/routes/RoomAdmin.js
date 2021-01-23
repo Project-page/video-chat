@@ -191,66 +191,66 @@ const RoomAdmin = (props) => {
       <div class="column">
         <h1>Pursuit</h1>
         <div class="row">
-          <button class="button" onClick={() => sendMessage("From Button 1")}>
+          <button class="button" onClick={() => sendMessage("line slow small")}>
             line slow small
           </button>
-          <button class="button" onClick={() => sendMessage("From Button 2")}>
+          <button class="button" onClick={() => sendMessage("line slow large")}>
             line slow large
           </button>
         </div>
         <div class="row">
-          <button class="button" onClick={() => sendMessage("From Button 1")}>
+          <button class="button" onClick={() => sendMessage("line fast small")}>
             line fast small
           </button>
-          <button class="button" onClick={() => sendMessage("From Button 2")}>
+          <button class="button" onClick={() => sendMessage("line fast large")}>
             line fast large
           </button>
         </div>
         <div class="row">
-          <button class="button" onClick={() => sendMessage("From Button 1")}>
+          <button class="button" onClick={() => sendMessage("L slow small")}>
             L slow small
           </button>
-          <button class="button" onClick={() => sendMessage("From Button 2")}>
+          <button class="button" onClick={() => sendMessage("L slow large")}>
             L slow large
           </button>
         </div>
         <div class="row">
-          <button class="button" onClick={() => sendMessage("From Button 1")}>
+          <button class="button" onClick={() => sendMessage("L fast small")}>
             L fast small
           </button>
-          <button class="button" onClick={() => sendMessage("From Button 2")}>
+          <button class="button" onClick={() => sendMessage("L fast large")}>
             L fast large
           </button>
         </div>
         <div class="row">
-          <button class="button" onClick={() => sendMessage("From Button 1")}>
+          <button class="button" onClick={() => sendMessage("U slow small")}>
             U slow small
           </button>
-          <button class="button" onClick={() => sendMessage("From Button 2")}>
+          <button class="button" onClick={() => sendMessage("U slow large")}>
             U slow large
           </button>
         </div>
         <div class="row">
-          <button class="button" onClick={() => sendMessage("From Button 1")}>
+          <button class="button" onClick={() => sendMessage("U fast small")}>
             U fast small
           </button>
-          <button class="button" onClick={() => sendMessage("From Button 2")}>
+          <button class="button" onClick={() => sendMessage("U fast large")}>
             U fast large
           </button>
         </div>
         <div class="row">
-          <button class="button" onClick={() => sendMessage("From Button 1")}>
+          <button class="button" onClick={() => sendMessage("Rect slow small")}>
             Rect slow small
           </button>
-          <button class="button" onClick={() => sendMessage("From Button 2")}>
+          <button class="button" onClick={() => sendMessage("Rect slow large")}>
             Rect slow large
           </button>
         </div>
         <div class="row">
-          <button class="button" onClick={() => sendMessage("From Button 1")}>
+          <button class="button" onClick={() => sendMessage("Rect fast small")}>
             Rect fast small
           </button>
-          <button class="button" onClick={() => sendMessage("From Button 2")}>
+          <button class="button" onClick={() => sendMessage("Rect fast large")}>
             Rect fast large
           </button>
         </div>

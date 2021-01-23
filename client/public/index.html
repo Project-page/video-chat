@@ -5,10 +5,7 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="description" content="Welcome to the study" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -28,6 +25,15 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div>
+      <p id="screenSize" style="text-align: center"></p>
+    </div>
+
+    <script>
+      var txt = "";
+      txt += "Screen dimention: " + screen.width + "*" + screen.height + "";
+      document.getElementById("screenSize").innerHTML = txt;
+    </script>
     <div id="root"></div>
     <!--
       This HTML file is a template.
