@@ -65,73 +65,177 @@ const Room = (props) => {
         socketRef.current.on("ice-candidate", handleNewICECandidateMsg);
 
         socketRef.current.on("incomingMessage", (message) => {
+          document.getElementById("ViewPlace").style.visibility = "visible";
+          document.getElementById("ClientStartBtn").style.visibility =
+            "visible";
           if (message === "line small") {
             //setGif(true)
             setImage1(true);
-            document.getElementById("ViewPlace").style.width = "50%";
+            document.getElementById("ViewPlace").style.width = "188px";
             document.getElementById("ViewPlace").src = "/lineBase.png";
-            document.getElementById("ClientBtnPlace").style.visibility =
-              "visible";
           } else {
             setImage1(false);
           }
           if (message === "line large") {
             setImage2(true);
-            document.getElementById("ViewPlace").style.width = "100%";
+            document.getElementById("ViewPlace").style.width = "375px";
             document.getElementById("ViewPlace").src = "/lineBase.png";
-            document.getElementById("ClientBtnPlace").style.visibility =
-              "visible";
           } else {
             setImage2(false);
           }
           if (message === "L small") {
-            //setGif(true)
             setImage3(true);
+            document.getElementById("ViewPlace").style.width = "188px";
+            document.getElementById("ViewPlace").src = "/LBase.png";
           } else {
             setImage3(false);
           }
           if (message === "L large") {
             setImage4(true);
+            document.getElementById("ViewPlace").style.width = "375px";
+            document.getElementById("ViewPlace").src = "/LBase.png";
           } else {
             setImage4(false);
           }
           if (message === "U small") {
-            //setGif(true)
             setImage5(true);
+            document.getElementById("ViewPlace").style.width = "188px";
+            document.getElementById("ViewPlace").src = "/UBase.png";
           } else {
             setImage5(false);
           }
           if (message === "U large") {
             setImage6(true);
+            document.getElementById("ViewPlace").style.width = "375px";
+            document.getElementById("ViewPlace").src = "/UBase.png";
           } else {
             setImage6(false);
           }
           if (message === "Rect small") {
-            //setGif(true)
             setImage7(true);
+            document.getElementById("ViewPlace").style.width = "188px";
+            document.getElementById("ViewPlace").src = "/RectBase.png";
           } else {
             setImage7(false);
           }
           if (message === "Rect large") {
             setImage8(true);
+            document.getElementById("ViewPlace").style.width = "375px";
+            document.getElementById("ViewPlace").src = "/RectBase.png";
           } else {
             setImage8(false);
           }
+
+          // ------------------------------------------Gifs here-----------------------------------------------//
+          if (message === "line slow small") {
+            setGiflss(true);
+            document.getElementById("ViewPlace").style.width = "188px";
+            document.getElementById("ViewPlace").src = "/lineBase.png";
+          } else {
+            setGiflss(false);
+          }
+          if (message === "line slow large") {
+            setGiflsl(true);
+            document.getElementById("ViewPlace").style.width = "375px";
+            document.getElementById("ViewPlace").src = "/lineBase.png";
+          } else {
+            setGiflsl(false);
+          }
+          if (message === "line fast small") {
+            setGiflfs(true);
+            document.getElementById("ViewPlace").style.width = "188px";
+            document.getElementById("ViewPlace").src = "/lineBase.png";
+          } else {
+            setGiflfs(false);
+          }
+          if (message === "line fast large") {
+            setGiflfl(true);
+            document.getElementById("ViewPlace").style.width = "375px";
+            document.getElementById("ViewPlace").src = "/lineBase.png";
+          } else {
+            setGiflfl(false);
+          }
+          if (message === "L slow small") {
+            setGifLss(true);
+            document.getElementById("ViewPlace").style.width = "188px";
+            document.getElementById("ViewPlace").src = "/LBase.png";
+          } else {
+            setGifLss(false);
+          }
+          if (message === "L slow large") {
+            setGifLsl(true);
+            document.getElementById("ViewPlace").style.width = "375px";
+            document.getElementById("ViewPlace").src = "/LBase.png";
+          } else {
+            setGifLsl(false);
+          }
+          if (message === "L fast small") {
+            setGifLfs(true);
+            document.getElementById("ViewPlace").style.width = "188px";
+            document.getElementById("ViewPlace").src = "/LBase.png";
+          } else {
+            setGifLfs(false);
+          }
+          if (message === "L fast large") {
+            setGifLfl(true);
+            document.getElementById("ViewPlace").style.width = "375px";
+            document.getElementById("ViewPlace").src = "/LBase.png";
+          } else {
+            setGifLfl(false);
+          }
+          if (message === "U slow small") {
+            setGifUss(true);
+            document.getElementById("ViewPlace").style.width = "188px";
+            document.getElementById("ViewPlace").src = "/UBase.png";
+          } else {
+            setGifUss(false);
+          }
+          if (message === "U slow large") {
+            setGifUsl(true);
+            document.getElementById("ViewPlace").style.width = "375px";
+            document.getElementById("ViewPlace").src = "/UBase.png";
+          } else {
+            setGifUsl(false);
+          }
+          if (message === "U fast small") {
+            setGifUfs(true);
+            document.getElementById("ViewPlace").style.width = "188px";
+            document.getElementById("ViewPlace").src = "/UBase.png";
+          } else {
+            setGifUfs(false);
+          }
+          if (message === "U fast large") {
+            setGifUfl(true);
+            document.getElementById("ViewPlace").style.width = "375px";
+            document.getElementById("ViewPlace").src = "/UBase.png";
+          } else {
+            setGifUfl(false);
+          }
+          if (message === "Rect slow small") {
+            setGifrss(true);
+            document.getElementById("ViewPlace").style.width = "188px";
+            document.getElementById("ViewPlace").src = "/RectBase.png";
+          } else {
+            setGifrss(false);
+          }
+          if (message === "Rect slow large") {
+            setGifrsl(true);
+            document.getElementById("ViewPlace").style.width = "375px";
+            document.getElementById("ViewPlace").src = "/RectBase.png";
+          } else {
+            setGifrsl(false);
+          }
           if (message === "Rect fast small") {
             setGifrfs(true);
-            document.getElementById("ViewPlace").style.width = "50%";
+            document.getElementById("ViewPlace").style.width = "188px";
             document.getElementById("ViewPlace").src = "/RectBase.png";
-            document.getElementById("ClientBtnPlace").style.visibility =
-              "visible";
           } else {
             setGifrfs(false);
           }
           if (message === "Rect fast large") {
             setGifrfl(true);
-            document.getElementById("ViewPlace").style.width = "100%";
+            document.getElementById("ViewPlace").style.width = "375px";
             document.getElementById("ViewPlace").src = "/RectBase.png";
-            document.getElementById("ClientBtnPlace").style.visibility =
-              "visible";
           } else {
             setGifrfl(false);
           }
@@ -236,28 +340,107 @@ const Room = (props) => {
     partnerVideo.current.srcObject = e.streams[0];
   }
 
-  function clientButton(message) {
+  function clientStart(message) {
     socketRef.current.emit("fromBtn", message);
+    document.getElementById("ViewPlace").style.visibility = "visible";
     //setMessageAd(message);
     //var txt = "All working";
     //if (message === "Start") document.getElementById("demo").innerHTML = txt;
 
     console.log("sent");
-    if (image1) document.getElementById("ViewPlace").src = "/line.png";
-    else if (image2) {
-      document.getElementById("ViewPlace").style.width = "100%";
+    if (image1) {
+      document.getElementById("ViewPlace").style.width = "188px";
       document.getElementById("ViewPlace").src = "/line.png";
+    } else if (image2) {
+      document.getElementById("ViewPlace").style.width = "375px";
+      document.getElementById("ViewPlace").src = "/line.png";
+    } else if (image3) {
+      document.getElementById("ViewPlace").style.width = "188px";
+      document.getElementById("ViewPlace").src = "/L.png";
+    } else if (image4) {
+      document.getElementById("ViewPlace").style.width = "375px";
+      document.getElementById("ViewPlace").src = "/L.png";
+    } else if (image5) {
+      document.getElementById("ViewPlace").style.width = "188px";
+      document.getElementById("ViewPlace").src = "/U.png";
+    } else if (image6) {
+      document.getElementById("ViewPlace").style.width = "375px";
+      document.getElementById("ViewPlace").src = "/U.png";
+    } else if (image7) {
+      document.getElementById("ViewPlace").style.width = "188px";
+      document.getElementById("ViewPlace").src = "/Rect.png";
+    } else if (image8) {
+      document.getElementById("ViewPlace").style.width = "375px";
+      document.getElementById("ViewPlace").src = "/Rect.png";
+    }
+    //-----------------------------gifs-----------------------------------------
+    else if (giflss) {
+      document.getElementById("ViewPlace").style.width = "188px";
+      document.getElementById("ViewPlace").src = "/line_250px.gif";
+    } else if (giflsl) {
+      document.getElementById("ViewPlace").style.width = "375px";
+      document.getElementById("ViewPlace").src = "/line_250px.gif";
+    } else if (giflfs) {
+      document.getElementById("ViewPlace").style.width = "188px";
+      document.getElementById("ViewPlace").src = "/line_500px.gif";
+    } else if (giflfl) {
+      document.getElementById("ViewPlace").style.width = "375px";
+      document.getElementById("ViewPlace").src = "/line_500px.gif";
+    } else if (gifLss) {
+      document.getElementById("ViewPlace").style.width = "188px";
+      document.getElementById("ViewPlace").src = "/L_250px.gif";
+    } else if (gifLsl) {
+      document.getElementById("ViewPlace").style.width = "375px";
+      document.getElementById("ViewPlace").src = "/L_250px.gif";
+    } else if (gifLfs) {
+      document.getElementById("ViewPlace").style.width = "188px";
+      document.getElementById("ViewPlace").src = "/L_500px.gif";
+    } else if (gifLfl) {
+      document.getElementById("ViewPlace").style.width = "375px";
+      document.getElementById("ViewPlace").src = "/L_500px.gif";
+    } else if (gifUss) {
+      document.getElementById("ViewPlace").style.width = "188px";
+      document.getElementById("ViewPlace").src = "/U_250px.gif";
+    } else if (gifUsl) {
+      document.getElementById("ViewPlace").style.width = "375px";
+      document.getElementById("ViewPlace").src = "/U_250px.gif";
+    } else if (gifUfs) {
+      document.getElementById("ViewPlace").style.width = "188px";
+      document.getElementById("ViewPlace").src = "/U_500px.gif";
+    } else if (gifUfl) {
+      document.getElementById("ViewPlace").style.width = "375px";
+      document.getElementById("ViewPlace").src = "/U_500px.gif";
+    } else if (gifrss) {
+      document.getElementById("ViewPlace").style.width = "188px";
+      document.getElementById("ViewPlace").src = "/Rect_250px.gif";
+    } else if (gifrsl) {
+      document.getElementById("ViewPlace").style.width = "375px";
+      document.getElementById("ViewPlace").src = "/Rect_250px.gif";
     } else if (gifrfs) {
-      document.getElementById("ViewPlace").style.width = "50%";
-      document.getElementById("ViewPlace").src = "/Rect_400px.gif";
+      document.getElementById("ViewPlace").style.width = "188px";
+      document.getElementById("ViewPlace").src = "/Rect_500px.gif";
     } else if (gifrfl) {
-      document.getElementById("ViewPlace").style.width = "100%";
-      document.getElementById("ViewPlace").src = "/Rect_400px.gif";
+      document.getElementById("ViewPlace").style.width = "375px";
+      document.getElementById("ViewPlace").src = "/Rect_500px.gif";
     }
 
     //else if (gifrfs) document.getElementById("ViewPlace").src = "/100px.gif";
 
-    document.getElementById("ClientBtnPlace").style.visibility = "hidden";
+    document.getElementById("ClientStartBtn").style.visibility = "hidden";
+    document.getElementById("ClientDoneBtn").style.visibility = "visible";
+  }
+
+  function clientDone(message) {
+    socketRef.current.emit("fromBtn", message);
+
+    //var txt = "All working";
+    //if (message === "Start") document.getElementById("demo").innerHTML = txt;
+
+    console.log("Done");
+
+    document.getElementById("ClientStartBtn").style.visibility = "hidden";
+    document.getElementById("ClientDoneBtn").style.visibility = "hidden";
+    document.getElementById("ViewPlace").style.visibility = "hidden";
   }
   //<img class="two" src = "/line.png" width="906" height="458" align="center"/>
   //<img src = "/line.png" width="906" height="458" align="center"/>
@@ -275,16 +458,26 @@ const Room = (props) => {
       <p>{message}</p>
 
       <p id="demo"></p>
-      <img id="ViewPlace" style={{ width: "50%" }} align="center" />
-      <img id="ViewPlaceLarge" style={{ width: "100%" }} align="center" />
+      {/* <img id="ViewPlace" style={{ width: "50%" }} align="center" /> */}
+      {/* <img id="ViewPlaceLarge" style={{ width: "100%" }} align="center" /> */}
+      <img id="ViewPlace" style={{ width: "375px" }} align="center" />
+
       <div>
         <button
-          id="ClientBtnPlace"
+          id="ClientStartBtn"
           class="button"
           style={{ visibility: "hidden" }}
-          onClick={() => clientButton("Start")}
+          onClick={() => clientStart("Start")}
         >
           Start
+        </button>
+        <button
+          id="ClientDoneBtn"
+          class="button"
+          style={{ visibility: "hidden" }}
+          onClick={() => clientDone("Done")}
+        >
+          Done
         </button>
       </div>
     </div>

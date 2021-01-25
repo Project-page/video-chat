@@ -35,6 +35,11 @@ const RoomAdmin = (props) => {
         socketRef.current.on("answer", handleAnswer);
 
         socketRef.current.on("ice-candidate", handleNewICECandidateMsg);
+
+        socketRef.current.on("incomingMessage", (message) => {
+          setMessageAd(message);
+          console.log("Done recieved");
+        });
       });
   }, []);
 
