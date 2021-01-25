@@ -249,10 +249,10 @@ const Room = (props) => {
       document.getElementById("ViewPlace").src = "/line.png";
     } else if (gifrfs) {
       document.getElementById("ViewPlace").style.width = "50%";
-      document.getElementById("ViewPlace").src = "/100px.gif";
+      document.getElementById("ViewPlace").src = "/Rect_400px.gif";
     } else if (gifrfl) {
       document.getElementById("ViewPlace").style.width = "100%";
-      document.getElementById("ViewPlace").src = "/100px.gif";
+      document.getElementById("ViewPlace").src = "/Rect_400px.gif";
     }
 
     //else if (gifrfs) document.getElementById("ViewPlace").src = "/100px.gif";
