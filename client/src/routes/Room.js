@@ -376,52 +376,52 @@ const Room = (props) => {
     //-----------------------------gifs-----------------------------------------
     else if (giflss) {
       document.getElementById("ViewPlace").style.width = "188px";
-      document.getElementById("ViewPlace").src = "/line_250px.gif";
+      document.getElementById("ViewPlace").src = "/line_200px.gif";
     } else if (giflsl) {
       document.getElementById("ViewPlace").style.width = "375px";
-      document.getElementById("ViewPlace").src = "/line_250px.gif";
+      document.getElementById("ViewPlace").src = "/line_100px.gif";
     } else if (giflfs) {
       document.getElementById("ViewPlace").style.width = "188px";
       document.getElementById("ViewPlace").src = "/line_500px.gif";
     } else if (giflfl) {
       document.getElementById("ViewPlace").style.width = "375px";
-      document.getElementById("ViewPlace").src = "/line_500px.gif";
+      document.getElementById("ViewPlace").src = "/line_250px.gif";
     } else if (gifLss) {
       document.getElementById("ViewPlace").style.width = "188px";
-      document.getElementById("ViewPlace").src = "/L_250px.gif";
+      document.getElementById("ViewPlace").src = "/L_200px.gif";
     } else if (gifLsl) {
       document.getElementById("ViewPlace").style.width = "375px";
-      document.getElementById("ViewPlace").src = "/L_250px.gif";
+      document.getElementById("ViewPlace").src = "/L_100px.gif";
     } else if (gifLfs) {
       document.getElementById("ViewPlace").style.width = "188px";
       document.getElementById("ViewPlace").src = "/L_500px.gif";
     } else if (gifLfl) {
       document.getElementById("ViewPlace").style.width = "375px";
-      document.getElementById("ViewPlace").src = "/L_500px.gif";
+      document.getElementById("ViewPlace").src = "/L_250px.gif";
     } else if (gifUss) {
       document.getElementById("ViewPlace").style.width = "188px";
-      document.getElementById("ViewPlace").src = "/U_250px.gif";
+      document.getElementById("ViewPlace").src = "/U_200px.gif";
     } else if (gifUsl) {
       document.getElementById("ViewPlace").style.width = "375px";
-      document.getElementById("ViewPlace").src = "/U_250px.gif";
+      document.getElementById("ViewPlace").src = "/U_100px.gif";
     } else if (gifUfs) {
       document.getElementById("ViewPlace").style.width = "188px";
       document.getElementById("ViewPlace").src = "/U_500px.gif";
     } else if (gifUfl) {
       document.getElementById("ViewPlace").style.width = "375px";
-      document.getElementById("ViewPlace").src = "/U_500px.gif";
+      document.getElementById("ViewPlace").src = "/U_250px.gif";
     } else if (gifrss) {
       document.getElementById("ViewPlace").style.width = "188px";
-      document.getElementById("ViewPlace").src = "/Rect_250px.gif";
+      document.getElementById("ViewPlace").src = "/Rect_200px.gif";
     } else if (gifrsl) {
       document.getElementById("ViewPlace").style.width = "375px";
-      document.getElementById("ViewPlace").src = "/Rect_250px.gif";
+      document.getElementById("ViewPlace").src = "/Rect_100px.gif";
     } else if (gifrfs) {
       document.getElementById("ViewPlace").style.width = "188px";
       document.getElementById("ViewPlace").src = "/Rect_500px.gif";
     } else if (gifrfl) {
       document.getElementById("ViewPlace").style.width = "375px";
-      document.getElementById("ViewPlace").src = "/Rect_500px.gif";
+      document.getElementById("ViewPlace").src = "/Rect_250px.gif";
     }
 
     //else if (gifrfs) document.getElementById("ViewPlace").src = "/100px.gif";
@@ -466,7 +466,13 @@ const Room = (props) => {
         <button
           id="ClientStartBtn"
           class="button"
-          style={{ visibility: "hidden" }}
+          style={{
+            visibility: "hidden",
+            width: "70px",
+            height: "30px",
+            padding: "5px 5px",
+            margin: "7px 7px",
+          }}
           onClick={() => clientStart("Start")}
         >
           Start
@@ -474,7 +480,13 @@ const Room = (props) => {
         <button
           id="ClientDoneBtn"
           class="button"
-          style={{ visibility: "hidden" }}
+          style={{
+            visibility: "hidden",
+            width: "70px",
+            height: "30px",
+            padding: "5px 5px",
+            margin: "7px 7px",
+          }}
           onClick={() => clientDone("Done")}
         >
           Done
@@ -485,59 +497,3 @@ const Room = (props) => {
 };
 
 export default Room;
-
-//<div>
-//       <button class="button" onClick={() => clientButton("Start")}>
-//       Start
-//     </button>
-//    </div>
-
-// {image1 ? (
-//   <div>
-//     <div class="row">
-//       <img src="/line1.png" style={{ width: "50%" }} align="center" />
-//     </div>
-//     <div class="row">
-//       <button class="button" onClick={() => clientButton("Start")}>
-//         Start
-//       </button>
-//     </div>
-//   </div>
-// ) : (
-//   ""
-// )}
-// {image2 ? (
-//   <img src="/line1.png" style={{ width: "100%" }} align="center" />
-// ) : (
-//   ""
-// )}
-// {image3 ? (
-//   <img src="/L1.png" width="250" height="250" align="center" />
-// ) : (
-//   ""
-// )}
-// {image4 ? (
-//   <img src="/L1.png" width="408" height="408" align="center" />
-// ) : (
-//   ""
-// )}
-// {image5 ? (
-//   <img src="/U1.png" width="250" height="250" align="center" />
-// ) : (
-//   ""
-// )}
-// {image6 ? (
-//   <img src="/U1.png" width="408" height="408" align="center" />
-// ) : (
-//   ""
-// )}
-// {image7 ? (
-//   <img src="/Gif1.png" style={{ width: "50%" }} align="center" />
-// ) : (
-//   ""
-// )}
-// {image8 ? (
-//   <img src="/Gif1.png" style={{ width: "100%" }} align="center" />
-// ) : (
-//   ""
-// )}
