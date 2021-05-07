@@ -188,7 +188,12 @@ const RoomAdmin = (props) => {
           ref={userVideo}
           style={{ width: 0, visibility: "hidden" }}
         />
-        <video autoPlay ref={partnerVideo} />
+        <video
+          autoPlay
+          ref={partnerVideo}
+          style={{ width: "90%" }}
+          align="center"
+        />
 
         <p>{messageAd}</p>
       </div>
